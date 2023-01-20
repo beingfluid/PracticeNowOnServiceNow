@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="DELETE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-01-20 18:19:52</sys_created_on>
+        <sys_id>ba32614987206510cf80fea9cebb3500</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_845446_practicen_question_bank.x_845446_practicen.question_bank_user</sys_name>
+        <sys_package display_value="PracticeNow" source="x_845446_practicen">e91a454d87ac2510cf80fea9cebb3584</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PracticeNow">e91a454d87ac2510cf80fea9cebb3584</sys_scope>
+        <sys_security_acl display_value="x_845446_practicen_question_bank">f232214987206510cf80fea9cebb35fe</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_ba32614987206510cf80fea9cebb3500</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-01-20 18:19:52</sys_updated_on>
+        <sys_user_role display_value="x_845446_practicen.question_bank_user" name="x_845446_practicen.question_bank_user">2232290987206510cf80fea9cebb3588</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="PracticeNow">e91a454d87ac2510cf80fea9cebb3584</application>
+        <file_path/>
+        <instance_id>9c950096db32d70052e3f70fbf9619b2</instance_id>
+        <instance_name>dev62093</instance_name>
+        <name>sys_security_acl_role_ba32614987206510cf80fea9cebb3500</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_class_name>sys_security_acl_role</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-01-20 18:19:52</sys_created_on><sys_id>ba32614987206510cf80fea9cebb3500</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_845446_practicen_question_bank.x_845446_practicen.question_bank_user</sys_name><sys_package display_value="PracticeNow" source="x_845446_practicen">e91a454d87ac2510cf80fea9cebb3584</sys_package><sys_policy/><sys_scope display_value="PracticeNow">e91a454d87ac2510cf80fea9cebb3584</sys_scope><sys_security_acl display_value="x_845446_practicen_question_bank">f232214987206510cf80fea9cebb35fe</sys_security_acl><sys_update_name>sys_security_acl_role_ba32614987206510cf80fea9cebb3500</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-01-20 18:19:52</sys_updated_on><sys_user_role display_value="x_845446_practicen.question_bank_user" name="x_845446_practicen.question_bank_user">2232290987206510cf80fea9cebb3588</sys_user_role><transaction_id/></sys_security_acl_role></record_update>]]></payload>
+        <payload_hash>-1718622413</payload_hash>
+        <record_name>x_845446_practicen_question_bank.x_845446_practicen.question_bank_user</record_name>
+        <reverted_from/>
+        <source>3aae594587206510cf80fea9cebb358a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-01-20 18:19:52</sys_created_on>
+        <sys_id>3e32614987206510cf80fea9cebb3502</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>185d06894a00000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-01-20 18:19:52</sys_updated_on>
+        <type>Access Roles</type>
+        <update_guid>76326149712065109e9258f5beaf7302</update_guid>
+        <update_guid_history>76326149712065109e9258f5beaf7302:-1718622413</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="x_845446_practicen_question_bank.x_845446_practicen.question_bank_user">dec2a94987206510cf80fea9cebb35d5</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-01-20 18:22:18</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl_role">sys_security_acl_role</sys_db_object>
+        <sys_id>05b114aee64842a480bdd504cf284a90</sys_id>
+        <sys_metadata>ba32614987206510cf80fea9cebb3500</sys_metadata>
+        <sys_name>x_845446_practicen_question_bank.x_845446_practicen.question_bank_user</sys_name>
+        <sys_package display_value="PracticeNow" source="x_845446_practicen">e91a454d87ac2510cf80fea9cebb3584</sys_package>
+        <sys_parent display_value="">f232214987206510cf80fea9cebb35fe</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="PracticeNow">e91a454d87ac2510cf80fea9cebb3584</sys_scope>
+        <sys_scope_delete display_value="">8069edb6f74f41549ad71a7aa6ddaf84</sys_scope_delete>
+        <sys_update_name>sys_security_acl_role_ba32614987206510cf80fea9cebb3500</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_role_ba32614987206510cf80fea9cebb3500">3e32614987206510cf80fea9cebb3502</sys_update_version>
+    </sys_metadata_delete>
+</record_update>

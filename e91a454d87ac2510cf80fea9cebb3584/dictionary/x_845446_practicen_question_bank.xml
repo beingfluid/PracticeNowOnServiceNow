@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="3cd22d4987206510cf80fea9cebb3595" label="Question bank" max_length="40" name="x_845446_practicen_question_bank" type="collection">
+        <element label="Exam set" max_length="32" name="exam_set" reference="x_845446_practicen_exam_sets" type="reference"/>
+        <element label="Explaination" max_length="8000" name="explaination" type="html"/>
+        <element display="true" label="ID" max_length="40" name="id" type="string"/>
+        <element label="Question" max_length="8000" name="question" type="html"/>
+        <element choice="1" label="Type" max_length="40" name="type" type="choice">
+            <choice/>
+        </element>
+        <index name="index">
+            <element name="exam_set"/>
+        </index>
+    </element>
+</database>

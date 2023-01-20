@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module">
+    <sys_ui_module action="DELETE">
+        <active>true</active>
+        <application display_value="PracticeNow">1b4061c587206510cf80fea9cebb3554</application>
+        <filter/>
+        <name>Question banks</name>
+        <order/>
+        <path/>
+        <path_relative_to_root>false</path_relative_to_root>
+        <roles>x_845446_practicen.question_bank_user</roles>
+        <sys_class_name>sys_ui_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-01-20 18:19:52</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>2632290987206510cf80fea9cebb358f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Question banks</sys_name>
+        <sys_package display_value="PracticeNow" source="x_845446_practicen">e91a454d87ac2510cf80fea9cebb3584</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PracticeNow">e91a454d87ac2510cf80fea9cebb3584</sys_scope>
+        <sys_update_name>sys_ui_module_2632290987206510cf80fea9cebb358f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-01-20 18:19:52</sys_updated_on>
+        <table>x_845446_practicen_question_bank</table>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+    </sys_ui_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="PracticeNow">e91a454d87ac2510cf80fea9cebb3584</application>
+        <file_path/>
+        <instance_id>9c950096db32d70052e3f70fbf9619b2</instance_id>
+        <instance_name>dev62093</instance_name>
+        <name>sys_ui_module_2632290987206510cf80fea9cebb358f</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module"><sys_ui_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="PracticeNow">1b4061c587206510cf80fea9cebb3554</application><filter/><name>Question banks</name><order/><path/><path_relative_to_root>false</path_relative_to_root><roles>x_845446_practicen.question_bank_user</roles><sys_class_name>sys_ui_module</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-01-20 18:19:52</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>2632290987206510cf80fea9cebb358f</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Question banks</sys_name><sys_package display_value="PracticeNow" source="x_845446_practicen">e91a454d87ac2510cf80fea9cebb3584</sys_package><sys_policy/><sys_scope display_value="PracticeNow">e91a454d87ac2510cf80fea9cebb3584</sys_scope><sys_update_name>sys_ui_module_2632290987206510cf80fea9cebb358f</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-01-20 18:19:52</sys_updated_on><table>x_845446_practicen_question_bank</table><uncancelable>false</uncancelable><view_name/></sys_ui_module></record_update>]]></payload>
+        <payload_hash>719771654</payload_hash>
+        <record_name>Question banks</record_name>
+        <reverted_from/>
+        <source>3aae594587206510cf80fea9cebb358a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-01-20 18:19:52</sys_created_on>
+        <sys_id>6a32214987206510cf80fea9cebb35f8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>185d06892590000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-01-20 18:19:52</sys_updated_on>
+        <type>Module</type>
+        <update_guid>e63229096b206510f685a943ae121490</update_guid>
+        <update_guid_history>e63229096b206510f685a943ae121490:719771654</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-01-20 18:22:20</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_module">sys_ui_module</sys_db_object>
+        <sys_id>0a921c73362c45f882711cc4c8be1164</sys_id>
+        <sys_metadata>2632290987206510cf80fea9cebb358f</sys_metadata>
+        <sys_name>Question banks</sys_name>
+        <sys_package display_value="PracticeNow" source="x_845446_practicen">e91a454d87ac2510cf80fea9cebb3584</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="PracticeNow">e91a454d87ac2510cf80fea9cebb3584</sys_scope>
+        <sys_scope_delete display_value="">8069edb6f74f41549ad71a7aa6ddaf84</sys_scope_delete>
+        <sys_update_name>sys_ui_module_2632290987206510cf80fea9cebb358f</sys_update_name>
+        <sys_update_version display_value="sys_ui_module_2632290987206510cf80fea9cebb358f">6a32214987206510cf80fea9cebb35f8</sys_update_version>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="d531a54587206510cf80fea9cebb35ff" extends="x_845446_practicen_exam" label="Exam sets" max_length="40" name="x_845446_practicen_exam_sets" type="collection">
+        <element label="Duration" max_length="40" name="duration" type="glide_duration"/>
+        <element label="Exam" max_length="32" name="exam" reference="x_845446_practicen_exam" type="reference"/>
+        <index name="index">
+            <element name="exam"/>
+        </index>
+    </element>
+</database>

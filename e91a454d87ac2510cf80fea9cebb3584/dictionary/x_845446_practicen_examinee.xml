@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="27b7254d87206510cf80fea9cebb35a4" label="Examinee" max_length="40" name="x_845446_practicen_examinee" type="collection">
+        <element label="Address" max_length="400" name="address" type="string"/>
+        <element label="City" max_length="40" name="city" type="string"/>
+        <element label="Country" max_length="32" name="country" reference="core_country" type="reference"/>
+        <element label="Email address" max_length="100" name="email_address" type="string"/>
+        <element label="First name" max_length="40" name="first_name" type="string"/>
+        <element label="Full name" max_length="100" name="full_name" type="string"/>
+        <element label="Last name" max_length="40" name="last_name" type="string"/>
+        <element label="Mobile number" max_length="40" name="mobile_number" type="phone_number_e164"/>
+        <element label="Organization" max_length="80" name="organization" type="string"/>
+        <element label="Pin code" max_length="40" name="pin_code" type="string"/>
+        <element label="State" max_length="40" name="state" type="string"/>
+        <index name="index">
+            <element name="country"/>
+        </index>
+    </element>
+</database>
