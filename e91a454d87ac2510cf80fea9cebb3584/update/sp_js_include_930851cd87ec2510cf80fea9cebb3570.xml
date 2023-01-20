@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_js_include">
+    <sp_js_include action="INSERT_OR_UPDATE">
+        <display_name>https://cdnjs.cloudflare.com/ajax/libs/textAngular/1.1.2/textAngular.min.js</display_name>
+        <source>url</source>
+        <sys_class_name>sp_js_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-01-20 17:35:43</sys_created_on>
+        <sys_id>930851cd87ec2510cf80fea9cebb3570</sys_id>
+        <sys_name>https://cdnjs.cloudflare.com/ajax/libs/textAngular/1.1.2/textAngular.min.js</sys_name>
+        <sys_package display_value="PracticeNow" source="x_845446_practicen">e91a454d87ac2510cf80fea9cebb3584</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PracticeNow">e91a454d87ac2510cf80fea9cebb3584</sys_scope>
+        <sys_ui_script/>
+        <sys_update_name>sp_js_include_930851cd87ec2510cf80fea9cebb3570</sys_update_name>
+        <url>https://cdnjs.cloudflare.com/ajax/libs/textAngular/1.1.2/textAngular.min.js</url>
+    </sp_js_include>
+</record_update>
