@@ -4,8 +4,12 @@
         <element label="Explaination" max_length="8000" name="explaination" type="html"/>
         <element display="true" label="ID" max_length="40" name="id" type="string"/>
         <element label="Question" max_length="8000" name="question" type="html"/>
-        <element choice="1" label="Type" max_length="40" name="type" type="choice">
-            <choice/>
+        <element choice="1" label="Type" mandatory="true" max_length="40" name="type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Multiple choice" sequence="1" value="1"/>
+                <element inactive_on_update="false" label="True/False" sequence="2" value="2"/>
+                <element inactive_on_update="false" label="Multiselect" sequence="3" value="3"/>
+            </choice>
         </element>
         <index name="index">
             <element name="exam_set"/>

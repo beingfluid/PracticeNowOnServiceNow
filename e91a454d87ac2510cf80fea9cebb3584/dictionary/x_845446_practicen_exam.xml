@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="1f10ad8587206510cf80fea9cebb3571" label="Exam" max_length="40" name="x_845446_practicen_exam" type="collection">
-        <element label="Code" max_length="40" name="code" type="string"/>
+        <element display="true" label="Code" max_length="40" name="code" type="string"/>
         <element label="Description" max_length="400" name="description" type="string"/>
-        <element display="true" label="Name" max_length="40" name="name" type="string"/>
+        <element label="Name" max_length="40" name="name" type="string"/>
         <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
         <index name="index">
             <element name="sys_class_name"/>
