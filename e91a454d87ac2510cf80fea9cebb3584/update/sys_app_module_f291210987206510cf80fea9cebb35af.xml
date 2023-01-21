@@ -13,7 +13,7 @@
         <mobile_title>Exam sets</mobile_title>
         <mobile_view_name>Mobile</mobile_view_name>
         <name>x_845446_practicen_exam_sets</name>
-        <order/>
+        <order>200</order>
         <override_menu_roles>false</override_menu_roles>
         <query/>
         <report/>

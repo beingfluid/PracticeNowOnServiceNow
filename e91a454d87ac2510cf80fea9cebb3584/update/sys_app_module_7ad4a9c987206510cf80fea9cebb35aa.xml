@@ -13,7 +13,7 @@
         <mobile_title>Question banks</mobile_title>
         <mobile_view_name>Mobile</mobile_view_name>
         <name>x_845446_practicen_question_bank</name>
-        <order/>
+        <order>300</order>
         <override_menu_roles>false</override_menu_roles>
         <query/>
         <report/>

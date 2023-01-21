@@ -2,7 +2,7 @@
     <sp_dependency action="INSERT_OR_UPDATE">
         <module/>
         <name>bootstrap-combined.min.css</name>
-        <page_load>true</page_load>
+        <page_load>false</page_load>
         <sp_portals>17dbcdc187ec2510cf80fea9cebb3510</sp_portals>
         <sys_class_name>sp_dependency</sys_class_name>
         <sys_created_by>admin</sys_created_by>

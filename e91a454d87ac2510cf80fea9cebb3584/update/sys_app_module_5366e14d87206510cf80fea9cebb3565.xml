@@ -13,7 +13,7 @@
         <mobile_title>Exam registrations</mobile_title>
         <mobile_view_name>Mobile</mobile_view_name>
         <name>x_845446_practicen_exam_registrations</name>
-        <order/>
+        <order>500</order>
         <override_menu_roles>false</override_menu_roles>
         <query/>
         <report/>
