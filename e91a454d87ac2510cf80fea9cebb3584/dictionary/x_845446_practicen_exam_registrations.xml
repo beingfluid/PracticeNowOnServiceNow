@@ -5,7 +5,11 @@
         <element label="Exam set" max_length="32" name="exam_set" reference="x_845446_practicen_exam_sets" type="reference"/>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
         <element choice="1" label="Status" max_length="40" name="status" type="choice">
-            <choice/>
+            <choice>
+                <element inactive_on_update="false" label="Registered" sequence="0" value="Registered"/>
+                <element inactive_on_update="false" label="Started" sequence="1" value="Started"/>
+                <element inactive_on_update="false" label="Completed" sequence="2" value="Completed"/>
+            </choice>
         </element>
         <index name="index">
             <element name="exam_set"/>
