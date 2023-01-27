@@ -185,12 +185,14 @@
 	//Get Exam Set SysID
 	var examSetSysID = $sp.getParameter('exam_set');
 	
+	/*
 	if(!examSetSysID||examSetSysID=="undefined"){
 		//Show not found error (404)
 		data.examSetExist=false;
 	}else{
 		data.examSetExist=true;
 	}
+	*/
 	
 	//Get Exam Set Details
 	data.examSet = {};
@@ -251,12 +253,14 @@
         <sys_scope display_value="PracticeNow">e91a454d87ac2510cf80fea9cebb3584</sys_scope>
         <sys_update_name>sp_widget_68ac050587ec2510cf80fea9cebb35a1</sys_update_name>
         <template><![CDATA[<main class="px-3">
+  <!--
   <div ng-if="!c.data.examSetExist">
     <h5>
       Exam not found.
     </h5>
   </div>
-  <div ng-if="c.data.examSetExist" class="container">
+  -->
+  <div class="container">
     <div class="row">
       <div class="col-12" style="text-align: center;">
         <h1>{{examSetName}}</h1>

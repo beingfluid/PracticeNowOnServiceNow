@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_widget_dependency">
+    <m2m_sp_widget_dependency action="INSERT_OR_UPDATE">
+        <sp_dependency display_value="toaster.min.js">0e77b06187e8a510cf80fea9cebb35a6</sp_dependency>
+        <sp_widget display_value="Quiz Builder">5b26bced87a8a510cf80fea9cebb35fd</sp_widget>
+        <sys_class_name>m2m_sp_widget_dependency</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-01-22 04:30:18</sys_created_on>
+        <sys_id>9e87fcad87a8a510cf80fea9cebb3543</sys_id>
+        <sys_name>toaster.min.js.Quiz Builder</sys_name>
+        <sys_package display_value="PracticeNow" source="x_845446_practicen">e91a454d87ac2510cf80fea9cebb3584</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PracticeNow">e91a454d87ac2510cf80fea9cebb3584</sys_scope>
+        <sys_update_name>m2m_sp_widget_dependency_9e87fcad87a8a510cf80fea9cebb3543</sys_update_name>
+    </m2m_sp_widget_dependency>
+</record_update>

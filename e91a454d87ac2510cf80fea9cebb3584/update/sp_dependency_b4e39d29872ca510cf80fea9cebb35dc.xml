@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_dependency">
     <sp_dependency action="INSERT_OR_UPDATE">
-        <module>textAngular</module>
-        <name>textAngular.min.js</name>
-        <page_load>true</page_load>
-        <sp_portals>17dbcdc187ec2510cf80fea9cebb3510</sp_portals>
+        <module>ngSanitize</module>
+        <name>angular-sanitize.js</name>
+        <page_load>false</page_load>
+        <sp_portals/>
         <sys_class_name>sp_dependency</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-01-20 17:35:19</sys_created_on>
-        <sys_id>5ce79d8d87ec2510cf80fea9cebb358f</sys_id>
-        <sys_name>textAngular.min.js</sys_name>
+        <sys_created_on>2023-01-22 06:34:42</sys_created_on>
+        <sys_id>b4e39d29872ca510cf80fea9cebb35dc</sys_id>
+        <sys_name>angular-sanitize.js</sys_name>
         <sys_package display_value="PracticeNow" source="x_845446_practicen">e91a454d87ac2510cf80fea9cebb3584</sys_package>
         <sys_policy/>
         <sys_scope display_value="PracticeNow">e91a454d87ac2510cf80fea9cebb3584</sys_scope>
-        <sys_update_name>sp_dependency_5ce79d8d87ec2510cf80fea9cebb358f</sys_update_name>
+        <sys_update_name>sp_dependency_b4e39d29872ca510cf80fea9cebb35dc</sys_update_name>
     </sp_dependency>
 </record_update>

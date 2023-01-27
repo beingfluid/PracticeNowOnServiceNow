@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function($scope,$window,toaster,spUtil) {
+
+	var c = this;
+
+	$scope.exam_set = {
+		displayValue: "",
+		value: "",
+		name: 'exam_set'
+	};
+
+	$scope.$on("field.change", function(evt, parms) {
+		if (parms.field.name == 'exam_set'){
+			$scope.exam_set_sys_id=parms.newValue;
+		}
+
+	});
+
+	$scope.pop = function(toasterType,toasterTitle,toasterText,toasterTime){
+		toaster.pop({
+			type: toasterType,
+			title: toasterTitle,
+			body: toasterText,
+			timeout: toasterTime
+		});
+	};
+
+	$scope.disabled = false;
+
+	$scope.quizTemplateArray=[];
+	$scope.displayQueID=$scope.quizTemplateArray.length+1;
+	$scope.quizTemplateObject={
+		"quiz": {
+			"Id": 0,
+			"name": "",
+			"description": ""
+		},
+		"questions": []
+	};
+
+	$scope.addQuizInfo=function(){
+		$scope.quizTemplateObject["quiz"]["Id"]=$scope.quizID;
+		$scope.quizTemplateObject["quiz"]["name"]=$scope.quizTitle;
+		$scope.quizTemplateObject["quiz"]["description"]=$scope.quizDescription;
+		$scope.quizTemplate=JSON.stringify( $scope.quizTemplateObject,null,4);
+	}
+
+	$scope.addToQuiz=function(){
+		if(!$scope.htmlcontent || !$scope.singleSelect){
+			$scope.pop("warning","Error:","Both Question and Answer are manadatory!",3000);
+			// alert("Both Question and Answer are manadatory!");
+			return;
+		}
+		
+		
+		c.server.get({
+			action: 'create_que_in_que_bank',
+			quedata: {
+				"exam_set_sys_id":$scope.exam_set_sys_id,
+				"question_type":$scope.question_type,
+				"displayQueID":$scope.displayQueID,
+				"htmlcontent": $scope.htmlcontent,
+				"htmlcontentexplaination":$scope.htmlcontentexplaination
+			}
+			
+		}).then(function(response) {
+			$scope.pop("info","Success:","Question has been added to Quiz!",3000);
+			$scope.queSysID=response.data.queSysID;
+		});
+
+		
+		if(!$scope.htmlcontentexplaination){
+			$scope.htmlcontentexplaination="<b style=\"color:green;\">Correct: </b>";
+
+			if($scope.singleSelect=='A'){
+				$scope.htmlcontentexplaination+=$scope.currentOptionA;
+			}else if($scope.singleSelect=='B'){
+				$scope.htmlcontentexplaination+=$scope.currentOptionB;
+			}else if($scope.singleSelect=='C'){
+				$scope.htmlcontentexplaination+=$scope.currentOptionC;
+			}else if($scope.singleSelect=='D'){
+				$scope.htmlcontentexplaination+=$scope.currentOptionD;
+			}
+
+		}
+
+
+
+		var newQue={
+			"QuestionType": {
+				"Id": 1,
+				"Name": "Multiple Choice",
+				"IsActive": true
+			},
+			"QuestionTypeId":1
+		};
+
+		var newQueID=$scope.displayQueID;
+		$scope.displayQueID++;
+
+		newQue["Id"]=newQueID;
+		newQue["Name"]=$scope.htmlcontent;
+
+		if($scope.htmlcontentexplaination){
+			$scope.htmlcontentexplaination = $scope.htmlcontentexplaination.replaceAll("<b>Correct</b>", "<b style=\"color:green;\">Correct</b>");
+			$scope.htmlcontentexplaination = $scope.htmlcontentexplaination.replaceAll("<b>Incorrect</b>", "<b style=\"color:red;\">Incorrect</b>");
+		}
+
+
+		newQue["explaination"]=$scope.htmlcontentexplaination;
+
+		newQue["Options"]= [
+			{
+				"Id": 1,
+				"QuestionId": newQueID,
+				"Name": $scope.currentOptionA,
+				"IsAnswer": false
+			},
+			{
+				"Id": 2,
+				"QuestionId": newQueID,
+				"Name": $scope.currentOptionB,
+				"IsAnswer": false
+			},
+			{
+				"Id": 3,
+				"QuestionId": newQueID,
+				"Name": $scope.currentOptionC,
+				"IsAnswer": false
+			},
+			{
+				"Id": 4,
+				"QuestionId": newQueID,
+				"Name": $scope.currentOptionD,
+				"IsAnswer": false
+			}
+		];
+
+		if($scope.singleSelect=='A'){
+			newQue["Options"][0]["IsAnswer"]=true;
+		}else if($scope.singleSelect=='B'){
+			newQue["Options"][1]["IsAnswer"]=true;
+		}else if($scope.singleSelect=='C'){
+			newQue["Options"][2]["IsAnswer"]=true;
+		}else if($scope.singleSelect=='D'){
+			newQue["Options"][3]["IsAnswer"]=true;
+		}
+
+
+		$scope.quizTemplateArray.push(newQue);
+
+		$scope.quizTemplateObject.questions=$scope.quizTemplateArray;
+
+		$scope.quizTemplate=JSON.stringify( $scope.quizTemplateObject,null,4);
+		// console.log($scope.quizTemplateArray);
+		$scope.htmlcontent='';
+		$scope.htmlcontentexplaination='';
+		$scope.currentOptionA='';
+		$scope.currentOptionB='';
+		$scope.currentOptionC='';
+		$scope.currentOptionD='';
+		$scope.singleSelect='';
+
+		$window.scrollTo(0, 0);
+		$scope.pop("info","Success:","Question has been added to Quiz!",3000);
+		//   $window.alert("Question has been added to Quiz!");
+
+	}
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>quiz_builder</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Quiz Builder</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+
+	if (input && input.action == 'create_que_in_que_bank'){
+
+		//gs.addInfoMessage(JSON.stringify(input.quedata,null,4));
+		
+		var questionGr = new GlideRecord('x_845446_practicen_question_bank');
+		questionGr.newRecord();
+		questionGr.setValue("exam_set",input.quedata.exam_set_sys_id);
+		questionGr.setValue("type",input.quedata.question_type);
+		questionGr.setValue("id",input.quedata.displayQueID);
+		questionGr.setValue("question",input.quedata.htmlcontent);
+		questionGr.setValue("explaination",input.quedata.htmlcontentexplaination);
+		var queSysID=questionGr.update();
+
+		data.queSysID=queSysID;
+		
+		
+	}
+
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-01-22 04:24:21</sys_created_on>
+        <sys_id>5b26bced87a8a510cf80fea9cebb35fd</sys_id>
+        <sys_name>Quiz Builder</sys_name>
+        <sys_package display_value="PracticeNow" source="x_845446_practicen">e91a454d87ac2510cf80fea9cebb3584</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PracticeNow">e91a454d87ac2510cf80fea9cebb3584</sys_scope>
+        <sys_update_name>sp_widget_5b26bced87a8a510cf80fea9cebb35fd</sys_update_name>
+        <template><![CDATA[<main class="px-3">
+    <toaster-container></toaster-container>
+    <div style="text-align: center;">
+      <h1>Quiz Builder</h1>
+    </div>
+    <br />
+    
+    
+       
+    <div class="container">
+      
+       <div class="row">
+          <h6>Exam code</h6>
+          <div>
+            <sn-record-picker field="exam_set" 
+                            table="'x_845446_practicen_exam_sets'" 
+                            display-field="'code'" 
+                            value-field="'sys_id'" 
+                            search-fields="'code'" 
+                            page-size="100" 
+                            >
+          </sn-record-picker>
+         </div>
+          
+        </div>
+        
+        <div class="row">
+          <div class="col-8">
+            <h6>Que ID: <input placeholder="1" style="width: 10%; height:auto" type="number" min="1" ng-model="displayQueID"></h6>
+            
+            <h6>Question type:</h6>
+            <div>
+                <select name="question_type" ng-model="question_type">
+                    <option value="">Select the type of question</option>
+                    <option value="1">Multiple choice</option>
+                    <option value="2">True/False</option>
+                    <option value="3">Multiselect</option>
+                  </select>
+            </div>
+            
+            <h6>Que:</h6>
+            <sp-tinymce-editor id="htmlcontent" ng-model="htmlcontent" ng-model-options="{getterSetter: true}"></sp-tinymce-editor>
+            
+            <!--
+            <div text-angular="text-angular" name="htmlcontent" ng-model="htmlcontent" ta-disabled='disabled'></div>
+            -->
+            
+            
+            <h6>Options:</h6>
+            <div>
+                <span>A.&nbsp;&nbsp;&nbsp;&nbsp;</span><input placeholder="Option 1" style="width:90%; height:auto" type="text" ng-model="currentOptionA">
+            </div>
+            <div>
+                <span>B.&nbsp;&nbsp;&nbsp;&nbsp;</span><input placeholder="Option 2" style="width: 90%; height:auto" type="text" ng-model="currentOptionB">
+            </div>
+            
+            <div>
+                <span>C.&nbsp;&nbsp;&nbsp;&nbsp;</span><input placeholder="Option 3" style="width: 90%; height:auto" type="text" ng-model="currentOptionC">
+            </div>
+            <div>
+                <span>D.&nbsp;&nbsp;&nbsp;&nbsp;</span><input placeholder="Option 4" style="width: 90%; height:auto" type="text" ng-model="currentOptionD">
+            </div>
+
+            <h6>Answer:</h6>
+            <div>
+                <select name="singleSelect" ng-model="singleSelect">
+                    <option value="">Select the correct answer</option>
+                    <option value="A">A. {{currentOptionA}}</option>
+                    <option value="B">B. {{currentOptionB}}</option>
+                    <option value="C">C. {{currentOptionC}}</option>
+                    <option value="D">D. {{currentOptionD}}</option>
+                  </select>
+            </div>
+
+            <h6>Explaination:</h6>
+            <sp-tinymce-editor ng-model="htmlcontentexplaination" ng-model-options="{getterSetter: true}"></sp-tinymce-editor>
+            <!--
+            <div placeholder="Option 1" text-angular="text-angular" name="htmlcontentexplaination" ng-model="htmlcontentexplaination" ta-disabled='disabled'></div>
+						-->
+          </div>
+          <div class="col-4">
+            
+            <h6>Que Output:</h6>
+            <div ta-bind="text" ng-model="htmlcontent" ta-readonly='disabled'></div>
+            <div>
+                <div>
+                    <span>A.&nbsp;&nbsp;</span> {{currentOptionA}}
+                </div>
+                <div>
+                    <span>B.&nbsp;&nbsp;</span> {{currentOptionB}}
+                </div>
+                <div>
+                    <span>C.&nbsp;&nbsp;</span> {{currentOptionC}}
+                </div>
+                <div>
+                    <span>D.&nbsp;&nbsp;</span> {{currentOptionD}}
+                </div>
+            </div>
+            <h6>Explaination Output:</h6>
+            <div ta-bind="text" ng-model="htmlcontentexplaination" ta-readonly='disabled'></div>
+
+            <hr />
+            <button ng-click="addToQuiz()" class="btn btn-info" style="padding-left: 2%; padding-right:2%;" type="button">Add to Quiz</button>
+
+            <hr />
+            <h6>Que HTML:</h6>
+            <textarea ng-model="htmlcontent" style="width: 100%; height:auto;"></textarea>
+            <hr />
+            <h6>Explaination HTML:</h6>
+            <textarea ng-model="htmlcontentexplaination" style="width: 100%; height:auto"></textarea>
+           
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="row">
+            <div class="col-12">
+                <div>
+                    <h6>Quiz ID</h6>
+                    <input type="number" ng-model="quizID" style="height: auto;" min="1"/>
+                    
+                    <h6>Quiz Title</h6>
+                    <input type="text" ng-model="quizTitle" style="width: 50%; height: auto;"/>
+                            
+                    <h6>Quiz Description</h6>
+                    <input type="text" ng-model="quizDescription" style="width: 50%; height: auto;"/>
+                </div> 
+                <button ng-click="addQuizInfo()" type="button" class="btn btn-info">Add Quiz Info</button>
+                <hr />
+                <button style="display:block; margin-left:auto; margin-right: 0;" class="btn" ngclipboard data-clipboard-action="cut" data-clipboard-target="#quizObject">
+                    Select Quiz
+                </button>
+                
+                <pre style="width: 100%; height: auto" id="quizObject">{{quizTemplate}}</pre>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    
+</main>
+    ]]></template>
+    </sp_widget>
+</record_update>

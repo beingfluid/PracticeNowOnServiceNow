@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_widget_dependency">
+    <m2m_sp_widget_dependency action="DELETE">
+        <sp_dependency display_value="angular-sanitize.js">b4e39d29872ca510cf80fea9cebb35dc</sp_dependency>
+        <sp_widget display_value="Quiz Builder">5b26bced87a8a510cf80fea9cebb35fd</sp_widget>
+        <sys_class_name>m2m_sp_widget_dependency</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-01-22 06:34:42</sys_created_on>
+        <sys_id>e80451e9872ca510cf80fea9cebb35ac</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>angular-sanitize.js.Quiz Builder</sys_name>
+        <sys_package display_value="PracticeNow" source="x_845446_practicen">e91a454d87ac2510cf80fea9cebb3584</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PracticeNow">e91a454d87ac2510cf80fea9cebb3584</sys_scope>
+        <sys_update_name>m2m_sp_widget_dependency_e80451e9872ca510cf80fea9cebb35ac</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-01-22 06:34:42</sys_updated_on>
+    </m2m_sp_widget_dependency>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="PracticeNow">e91a454d87ac2510cf80fea9cebb3584</application>
+        <file_path/>
+        <instance_id>9c950096db32d70052e3f70fbf9619b2</instance_id>
+        <instance_name>dev62093</instance_name>
+        <name>m2m_sp_widget_dependency_e80451e9872ca510cf80fea9cebb35ac</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_widget_dependency"><m2m_sp_widget_dependency action="INSERT_OR_UPDATE"><sp_dependency display_value="angular-sanitize.js">b4e39d29872ca510cf80fea9cebb35dc</sp_dependency><sp_widget display_value="Quiz Builder">5b26bced87a8a510cf80fea9cebb35fd</sp_widget><sys_class_name>m2m_sp_widget_dependency</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-01-22 06:34:42</sys_created_on><sys_id>e80451e9872ca510cf80fea9cebb35ac</sys_id><sys_mod_count>0</sys_mod_count><sys_name>angular-sanitize.js.Quiz Builder</sys_name><sys_package display_value="PracticeNow" source="x_845446_practicen">e91a454d87ac2510cf80fea9cebb3584</sys_package><sys_policy/><sys_scope display_value="PracticeNow">e91a454d87ac2510cf80fea9cebb3584</sys_scope><sys_update_name>m2m_sp_widget_dependency_e80451e9872ca510cf80fea9cebb35ac</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-01-22 06:34:42</sys_updated_on></m2m_sp_widget_dependency></record_update>]]></payload>
+        <payload_hash>-1645499576</payload_hash>
+        <record_name>angular-sanitize.js.Quiz Builder</record_name>
+        <reverted_from/>
+        <source>3aae594587206510cf80fea9cebb358a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-01-22 06:34:42</sys_created_on>
+        <sys_id>2c0451e9872ca510cf80fea9cebb35ae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>185d82fb3330000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-01-22 06:34:42</sys_updated_on>
+        <type>Widget Dependency</type>
+        <update_guid>640451e92e2ca5100efe804ef65860ae</update_guid>
+        <update_guid_history>640451e92e2ca5100efe804ef65860ae:-1645499576</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="angular-sanitize.js.Quiz Builder">066459e9872ca510cf80fea9cebb35b7</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-01-22 06:36:26</sys_created_on>
+        <sys_db_object display_value="" name="m2m_sp_widget_dependency">m2m_sp_widget_dependency</sys_db_object>
+        <sys_id>0ae21d87cc4e4ab080e866e213679f90</sys_id>
+        <sys_metadata>e80451e9872ca510cf80fea9cebb35ac</sys_metadata>
+        <sys_name>angular-sanitize.js.Quiz Builder</sys_name>
+        <sys_package display_value="PracticeNow" source="x_845446_practicen">e91a454d87ac2510cf80fea9cebb3584</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="PracticeNow">e91a454d87ac2510cf80fea9cebb3584</sys_scope>
+        <sys_scope_delete display_value="">8069edb6f74f41549ad71a7aa6ddaf84</sys_scope_delete>
+        <sys_update_name>m2m_sp_widget_dependency_e80451e9872ca510cf80fea9cebb35ac</sys_update_name>
+        <sys_update_version display_value="m2m_sp_widget_dependency_e80451e9872ca510cf80fea9cebb35ac">2c0451e9872ca510cf80fea9cebb35ae</sys_update_version>
+    </sys_metadata_delete>
+</record_update>
