@@ -7,11 +7,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-01-22 04:41:30</sys_created_on>
         <sys_id>501a3ce187e8a510cf80fea9cebb3595</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>toaster.min.css</sys_name>
         <sys_package display_value="PracticeNow" source="x_845446_practicen">e91a454d87ac2510cf80fea9cebb3584</sys_package>
         <sys_policy/>
         <sys_scope display_value="PracticeNow">e91a454d87ac2510cf80fea9cebb3584</sys_scope>
         <sys_update_name>sp_css_include_501a3ce187e8a510cf80fea9cebb3595</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-01-27 01:56:08</sys_updated_on>
         <url>https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/3.0.0/toaster.min.css</url>
     </sp_css_include>
 </record_update>

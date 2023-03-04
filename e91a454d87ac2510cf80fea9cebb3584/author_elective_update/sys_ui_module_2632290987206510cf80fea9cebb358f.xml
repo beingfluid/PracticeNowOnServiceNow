@@ -59,6 +59,7 @@
         <sys_db_object display_value="" name="sys_ui_module">sys_ui_module</sys_db_object>
         <sys_id>0a921c73362c45f882711cc4c8be1164</sys_id>
         <sys_metadata>2632290987206510cf80fea9cebb358f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>Question banks</sys_name>
         <sys_package display_value="PracticeNow" source="x_845446_practicen">e91a454d87ac2510cf80fea9cebb3584</sys_package>
         <sys_parent/>
@@ -67,5 +68,7 @@
         <sys_scope_delete display_value="">8069edb6f74f41549ad71a7aa6ddaf84</sys_scope_delete>
         <sys_update_name>sys_ui_module_2632290987206510cf80fea9cebb358f</sys_update_name>
         <sys_update_version display_value="sys_ui_module_2632290987206510cf80fea9cebb358f">6a32214987206510cf80fea9cebb35f8</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-01-20 18:22:20</sys_updated_on>
     </sys_metadata_delete>
 </record_update>

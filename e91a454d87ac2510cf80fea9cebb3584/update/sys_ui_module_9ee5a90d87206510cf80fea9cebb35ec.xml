@@ -14,11 +14,14 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>9ee5a90d87206510cf80fea9cebb35ec</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>Question options</sys_name>
         <sys_package display_value="PracticeNow" source="x_845446_practicen">e91a454d87ac2510cf80fea9cebb3584</sys_package>
         <sys_policy/>
         <sys_scope display_value="PracticeNow">e91a454d87ac2510cf80fea9cebb3584</sys_scope>
         <sys_update_name>sys_ui_module_9ee5a90d87206510cf80fea9cebb35ec</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-01-20 18:51:27</sys_updated_on>
         <table>x_845446_practicen_question_options</table>
         <uncancelable>false</uncancelable>
         <view_name/>

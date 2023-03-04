@@ -48,6 +48,7 @@
         <sys_db_object display_value="" name="m2m_sp_widget_dependency">m2m_sp_widget_dependency</sys_db_object>
         <sys_id>4ccc82e72d484434a11d3b97c9a98239</sys_id>
         <sys_metadata>56b98ded87e8a510cf80fea9cebb3508</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>ui-bootstrap-tpls-0.3.0.min.js.Quiz Builder</sys_name>
         <sys_package display_value="PracticeNow" source="x_845446_practicen">e91a454d87ac2510cf80fea9cebb3584</sys_package>
         <sys_parent/>
@@ -56,5 +57,7 @@
         <sys_scope_delete display_value="">8069edb6f74f41549ad71a7aa6ddaf84</sys_scope_delete>
         <sys_update_name>m2m_sp_widget_dependency_56b98ded87e8a510cf80fea9cebb3508</sys_update_name>
         <sys_update_version display_value="m2m_sp_widget_dependency_56b98ded87e8a510cf80fea9cebb3508">16b9c1a1872ca510cf80fea9cebb3573</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-01-22 06:09:52</sys_updated_on>
     </sys_metadata_delete>
 </record_update>

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function ($scope, $rootScope, $timeout, spUtil, $location) {
+	var c = this;
+	if(c.data.is_logged_in)
+		$location.url($scope.portal.url_suffix);
+	c.captchaVerified = false;
+	c.policy = false;
+	CustomEvent.observe('sn_csm_captcha_verified', function(obj) {
+		c.captchaVerified = obj.captchaVerified;
+		c.grc = obj.grc;		
+		scope.$apply();	
+	});
+	c.showSubmit = function() {
+		if(c.data.enableCaptcha == 'false')
+			return !(c.first_name && c.policy == true && c.last_name && c.email && c.code);
+		else
+			return !(c.first_name && c.policy == true && c.captchaVerified == true && c.last_name && c.email && c.code && c.grc);
+	};
+	c.action = function() {
+		
+		c.data.action = 'register';
+		c.data.first_name = c.first_name;
+		c.data.last_name = c.last_name;
+		c.data.email = c.email;
+		c.data.code = c.code;
+		c.data.grc = c.grc;
+		c.server.update().then(function(response) {
+			var data = response["result"];
+			if (response.status == 'success') {
+				c.success = response["message"];
+			$timeout(function(){
+						$location.url('/'+$scope.portal.url_suffix);
+				},5000);
+			} else if (response.status == 'error') {
+				c.success = 'There was an error processing your request';
+				grecaptcha.reset();
+			}
+		});
+	};
+	$scope.registrationInit = function(){};
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.form_link a {
+  text-decoration: underline;
+}
+
+input[type="checkbox"]:focus{
+  outline-width:3px;
+  outline-color:$input-border-focus;
+  outline-style:solid;
+}
+
+.form_link a:focus {
+  outline-width:3px;
+  outline-color:$input-border-focus;
+  outline-style:solid;
+  outline-offset:2px;
+}
+
+.adjust-label{
+  padding-top: 0px;
+  margin-bottom: 7px;
+}
+  input:focus{
+    outline-style:solid;
+    outline-width:1px;
+  }
+
+@media (max-width: 375px) {
+     #html_element{
+         transform:scale(0.8);
+         -webkit-transform:scale(0.8);
+         transform-origin:0 0;
+         -webkit-transform-origin:0 0;
+    }
+}
+
+
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>exam-registration</id>
+        <internal>false</internal>
+        <link><![CDATA[function($document, $element) {
+    var tag = angular.element('<script/>').attr('src', "https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit&hl=" + g_lang).attr('defer', 'true').attr('async', 'true');
+    $element.append(tag);
+}]]></link>
+        <name>Exam Registration</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function($sp, input, data, options) {
+	"use strict";
+	data.is_logged_in = gs.getSession().isLoggedIn();
+	data.sys_id = '-1';
+	data.captch_url= 'https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit&hl=' + gs.getSession().getLanguage();
+	data.enableCaptcha = gs.getProperty('sn_customerservice.captchaEnabled');
+	data.captchaSiteKey = gs.getProperty('google.captcha.site_key');
+	if (input && input.action == 'register' && input.first_name && input.last_name && input.email && input.code) {
+		var trueCaptcha = new global.CSManagementUtils().verifyCaptcha(input.grc);
+		if(trueCaptcha) {
+			var result = {};
+			var gr = new GlideRecord('sn_customerservice_registration');
+			gr.initialize();
+			gr.setValue('first_name', input.first_name);
+			gr.setValue('last_name', input.last_name);
+			gr.setValue('email', input.email);
+			gr.setValue('registration_code', input.code);
+			var sys_id = gr.insert();
+			if(!gs.nil(sys_id)) {
+				data.sys_id = sys_id;
+				data.status = "success";
+				data.message = gs.getMessage("Your request has been submitted and is pending review. You will receive an email when your request is processed.");
+			} else {
+				data.status = "error";
+			}
+			data.result = result;
+			return data;
+		} else {
+			gs.addErrorMessage(gs.getMessage('Please verify the security code.'));
+			data.status = "error";
+			return data;
+		}	
+	}
+})($sp, input, data, options);]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-26 09:19:05</sys_created_on>
+        <sys_id>714906b487552110cf80fea9cebb3590</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Exam Registration</sys_name>
+        <sys_package display_value="PracticeNow" source="x_845446_practicen">e91a454d87ac2510cf80fea9cebb3584</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PracticeNow">e91a454d87ac2510cf80fea9cebb3584</sys_scope>
+        <sys_update_name>sp_widget_714906b487552110cf80fea9cebb3590</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-26 09:50:15</sys_updated_on>
+        <template><![CDATA[<div class="panel b" ng-init="registrationInit()">
+   <!-- header -->
+   <div class="panel-heading bg-primary">
+      <h2 class="panel-title">${Exam Registration}</h2>
+   </div>
+   <!-- body -->
+   <div class="panel-body" >
+      <form ng-submit="$event.preventDefault()" class="form-horizontal">
+         <!-- First Name input-->
+         <div class="form-group">
+            <label class="col-sm-3 control-label" for="first_name">${First Name}</label>
+            <div class="col-sm-6">
+               <input ng-model="c.first_name" id="first_name" name="first_name" autocomplete="name" placeholder="${first name}" class="form-control">
+            </div>
+         </div>
+         <!-- Last Name input-->
+         <div class="form-group">
+            <label class="col-sm-3 control-label" for="last_name">${Last Name}</label>
+            <div class="col-sm-6">
+               <input ng-model="c.last_name" id="last_name" name="last_name" autocomplete="family-name" placeholder="${last name}" class="form-control">
+            </div>
+         </div>
+         <!-- Business Email input-->
+         <div class="form-group">
+            <label class="col-sm-3 control-label" for="email">${Business Email}</label>
+            <div class="col-sm-6">
+               <input ng-model="c.email" id="email" name="email" autocomplete="email" placeholder="${business email}" class="form-control">
+            </div>
+         </div>
+         <!-- Registration Code input-->
+         <div class="form-group">
+            <label class="col-sm-3 control-label" for="code">${Registration Code}</label>
+            <div class="col-sm-6">
+               <input ng-model="c.code" id="code" name="code" placeholder="${Your company registration code}" class="form-control">
+            </div>
+         </div>
+         <!-- Privacy Policy & Terms conditions -->
+         <div class="form-group input-group-checkbox">
+            <div class="col-sm-6 form_link col-sm-offset-3">
+              <input ng-model="c.policy" id="checkbox_agree" aria-label="${I agree to the Privacy Policy and Community Terms and Conditions}"class="checkbox_agree" type="checkbox" name="policy">
+               <label class="control-label adjust-label" for="checkbox_agree">
+               ${I agree to the} <a href="/sn_customerservice_registration_privacy_policy_doc.do" target="_blank">${Privacy Policy}</a>
+               ${and Community} <a href="/sn_customerservice_registration_terms_doc.do" target="_blank">${Terms and Conditions}</a>
+               </label>
+            </div>
+         </div>
+        <input id="sitekey" type="hidden" value={{c.data.captchaSiteKey}}>
+         <script>
+            var onloadCallback = function() {
+                var siteKey = jQuery("#sitekey").val();
+                var captchaVerified;
+                var captchaWidget;
+                var verifyCallback = function(grc) {
+                    if ((grc == "") || (grc == undefined))
+                        captchaVerified = false;
+                    else 
+                        captchaVerified = true;
+                    jQuery("#captchaVerified").attr("value", captchaVerified);
+                    CustomEvent.fireAll('sn_csm_captcha_verified', {captchaVerified: captchaVerified, grc: grc});
+                };
+                captchaWidget = grecaptcha.render('html_element', {
+                    'sitekey': siteKey,
+                    'callback': verifyCallback,
+                    'theme': 'light',
+                    'expired-callback': captchaExpired
+                });
+            };
+            var captchaExpired = function() {
+                captchaVerified = false;
+                jQuery("#captchaVerified").attr("value", captchaVerified);
+                CustomEvent.fireAll('sn_csm_captcha_verified', {captchaVerified: captchaVerified, grc: null});
+            };
+         </script>
+         <!-- Google Recaptcha -->
+         <div ng-if="data.enableCaptcha == 'true'" id="captcha_form_group" class="form-group">
+            <input ng-model="c.captchaVerified" type="checkbox" name="captchaVerified" id="captchaVerified" style="display:none;" class="form-control">
+            <label class="col-sm-3 control-label">${reCAPTCHA verification}</label>
+            <div class="col-sm-6">
+      <form action="?" method="POST">
+      <div class="g-recaptcha" id="html_element"></div>
+      <span class="help-block" id="retype_captcha"></span>
+      </form>
+      </div>
+      </div>
+      <div>
+         <button type="submit" ng-disabled="data.status == 'success' || c.showSubmit()" ng-click="c.action()" class="btn btn-primary">${Submit}</button>
+      </div>
+      </form>
+   </div>
+</div>]]></template>
+    </sp_widget>
+</record_update>

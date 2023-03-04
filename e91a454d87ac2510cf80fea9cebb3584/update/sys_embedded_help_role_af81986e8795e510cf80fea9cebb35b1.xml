@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>1000</order>
+        <role display_value="x_845446_practicen.flashcards_user" name="x_845446_practicen.flashcards_user">e381906a8755e510cf80fea9cebb358c</role>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-03-03 11:05:23</sys_created_on>
+        <sys_id>af81986e8795e510cf80fea9cebb35b1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>e381906a8755e510cf80fea9cebb358c</sys_name>
+        <sys_package display_value="PracticeNow" source="x_845446_practicen">e91a454d87ac2510cf80fea9cebb3584</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PracticeNow">e91a454d87ac2510cf80fea9cebb3584</sys_scope>
+        <sys_update_name>sys_embedded_help_role_af81986e8795e510cf80fea9cebb35b1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-03-03 11:05:23</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>

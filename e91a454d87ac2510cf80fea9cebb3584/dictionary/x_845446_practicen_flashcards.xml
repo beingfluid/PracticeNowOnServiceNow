@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="8ee0dc2e8795e510cf80fea9cebb3563" label="Flashcards" max_length="40" name="x_845446_practicen_flashcards" type="collection">
+        <element label="Back" max_length="8000" name="back" type="html"/>
+        <element label="Exam" max_length="32" name="exam" reference="x_845446_practicen_exam" type="reference"/>
+        <element label="Front" max_length="8000" name="front" type="html"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
+        <index name="index">
+            <element name="exam"/>
+        </index>
+        <index name="index2">
+            <element name="sys_class_name"/>
+        </index>
+    </element>
+</database>

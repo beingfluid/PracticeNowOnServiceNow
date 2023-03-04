@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function($scope, $http) {
+	var c = this;
+	$scope.currentCard = {};
+	$scope.isFlipped = false;
+
+
+	$scope.flashcards = c.data.flashcards;
+	$scope.currentCard = $scope.flashcards[0];
+
+	$scope.showNextCard = function() {
+		$scope.isFlipped = false;
+		var currentIndex = $scope.flashcards.indexOf($scope.currentCard);
+		if (currentIndex < $scope.flashcards.length - 1) {
+			$scope.currentCard = $scope.flashcards[currentIndex + 1];
+		}
+	};
+
+	$scope.showPreviousCard = function() {
+		$scope.isFlipped = false;
+		var currentIndex = $scope.flashcards.indexOf($scope.currentCard);
+		if (currentIndex > 0) {
+			$scope.currentCard = $scope.flashcards[currentIndex - 1];
+		}
+	};
+
+	$scope.flipCard = function() {
+		$scope.isFlipped = !$scope.isFlipped;
+	};
+
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.flashcard {
+ 
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 500px;
+height: 300px;
+margin: 0 auto;
+border: 1px solid #ccc;
+
+}
+
+.flashcard h1 {
+  color: #333;
+}
+
+.flashcard p {
+  color: #666;
+}
+
+button {
+  background-color: #2196F3;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+  &amp;:hover {
+    background-color: #0d8aff;
+  }
+}
+
+.flashcard-container{
+    display: flex;
+    justify-content: center;
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>flashcards</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Flashcards</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+
+	data.flashcards=[
+		{
+			"front": "<h1>What is AngularJS?</h1>",
+			"back": "<p>AngularJS is a JavaScript framework for building web applications. It allows for the creation of dynamic, single-page web applications and provides a set of built-in directives and services for creating the user interface and handling data and logic.</p>"
+		},
+		{
+			"front": "<h1>What is a Controller?</h1>",
+			"back": "<p>A controller is a JavaScript function that controls the data and logic of a specific part of an AngularJS application. It is responsible for setting the initial state of the $scope object and updating it in response to events and user interactions.</p>"
+		}
+	];
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-01-27 09:06:25</sys_created_on>
+        <sys_id>f7a6a7c787e42510cf80fea9cebb3513</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name>Flashcards</sys_name>
+        <sys_package display_value="PracticeNow" source="x_845446_practicen">e91a454d87ac2510cf80fea9cebb3584</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PracticeNow">e91a454d87ac2510cf80fea9cebb3584</sys_scope>
+        <sys_update_name>sp_widget_f7a6a7c787e42510cf80fea9cebb3513</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-01-27 09:52:23</sys_updated_on>
+        <template><![CDATA[<div>
+  <div class="flashcard" ng-click="flipCard()">
+    <div ng-if="!isFlipped" ng-bind-html="currentCard.front"></div>
+    <div ng-if="isFlipped" ng-bind-html="currentCard.back"></div>
+  </div>
+ <div class="flashcard-container">
+       <button ng-click="showPreviousCard()">Previous</button>
+    <button ng-click="showNextCard()">Next</button>
+  </div>
+</div>]]></template>
+    </sp_widget>
+</record_update>

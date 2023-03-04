@@ -49,6 +49,7 @@
         <sys_db_object display_value="" name="sys_security_acl_role">sys_security_acl_role</sys_db_object>
         <sys_id>bc70c07b9d0b49f29f26a0d10b7dbcf1</sys_id>
         <sys_metadata>7a32214987206510cf80fea9cebb35fb</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>x_845446_practicen_question_bank.x_845446_practicen.question_bank_user</sys_name>
         <sys_package display_value="PracticeNow" source="x_845446_practicen">e91a454d87ac2510cf80fea9cebb3584</sys_package>
         <sys_parent display_value="">6232214987206510cf80fea9cebb35f9</sys_parent>
@@ -57,5 +58,7 @@
         <sys_scope_delete display_value="">8069edb6f74f41549ad71a7aa6ddaf84</sys_scope_delete>
         <sys_update_name>sys_security_acl_role_7a32214987206510cf80fea9cebb35fb</sys_update_name>
         <sys_update_version display_value="sys_security_acl_role_7a32214987206510cf80fea9cebb35fb">3e32214987206510cf80fea9cebb35fd</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-01-20 18:22:18</sys_updated_on>
     </sys_metadata_delete>
 </record_update>

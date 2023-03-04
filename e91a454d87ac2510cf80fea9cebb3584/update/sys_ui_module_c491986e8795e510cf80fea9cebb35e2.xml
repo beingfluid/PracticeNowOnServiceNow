@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module">
+    <sys_ui_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="PracticeNow">1b4061c587206510cf80fea9cebb3554</application>
+        <filter/>
+        <name>Flashcards</name>
+        <order/>
+        <path/>
+        <path_relative_to_root>false</path_relative_to_root>
+        <roles>x_845446_practicen.flashcards_user</roles>
+        <sys_class_name>sys_ui_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-03-03 11:05:24</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c491986e8795e510cf80fea9cebb35e2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Flashcards</sys_name>
+        <sys_package display_value="PracticeNow" source="x_845446_practicen">e91a454d87ac2510cf80fea9cebb3584</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PracticeNow">e91a454d87ac2510cf80fea9cebb3584</sys_scope>
+        <sys_update_name>sys_ui_module_c491986e8795e510cf80fea9cebb35e2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-03-03 11:05:24</sys_updated_on>
+        <table>x_845446_practicen_flashcards</table>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+    </sys_ui_module>
+</record_update>

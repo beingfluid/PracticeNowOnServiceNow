@@ -50,6 +50,7 @@
         <sys_db_object display_value="" name="sp_dependency">sp_dependency</sys_db_object>
         <sys_id>76823107cdaf484790208d623f8775c9</sys_id>
         <sys_metadata>4dd99d0187206510cf80fea9cebb359e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>ui-bootstrap-tpls-0.3.0.min.js</sys_name>
         <sys_package display_value="PracticeNow" source="x_845446_practicen">e91a454d87ac2510cf80fea9cebb3584</sys_package>
         <sys_parent/>
@@ -58,5 +59,7 @@
         <sys_scope_delete display_value="">8069edb6f74f41549ad71a7aa6ddaf84</sys_scope_delete>
         <sys_update_name>sp_dependency_4dd99d0187206510cf80fea9cebb359e</sys_update_name>
         <sys_update_version display_value="sp_dependency_4dd99d0187206510cf80fea9cebb359e">b85b558187206510cf80fea9cebb3580</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-01-20 17:52:44</sys_updated_on>
     </sys_metadata_delete>
 </record_update>

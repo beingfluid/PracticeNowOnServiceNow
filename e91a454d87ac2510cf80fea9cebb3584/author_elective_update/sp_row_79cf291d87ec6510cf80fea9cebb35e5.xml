@@ -50,6 +50,7 @@
         <sys_db_object display_value="" name="sp_row">sp_row</sys_db_object>
         <sys_id>2961c321a1ec4dc8978f79000b402f90</sys_id>
         <sys_metadata>79cf291d87ec6510cf80fea9cebb35e5</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>1</sys_name>
         <sys_package display_value="PracticeNow" source="x_845446_practicen">e91a454d87ac2510cf80fea9cebb3584</sys_package>
         <sys_parent/>
@@ -58,5 +59,7 @@
         <sys_scope_delete display_value="">8069edb6f74f41549ad71a7aa6ddaf84</sys_scope_delete>
         <sys_update_name>sp_row_79cf291d87ec6510cf80fea9cebb35e5</sys_update_name>
         <sys_update_version display_value="sp_row_79cf291d87ec6510cf80fea9cebb35e5">3dcf291d87ec6510cf80fea9cebb35e7</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-01-21 13:58:27</sys_updated_on>
     </sys_metadata_delete>
 </record_update>

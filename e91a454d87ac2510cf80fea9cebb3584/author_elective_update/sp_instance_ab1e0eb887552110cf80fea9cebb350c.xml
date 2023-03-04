@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="2">580ec6f887552110cf80fea9cebb351d</sp_column>
+        <sp_widget display_value="Login">6506d341cb33020000f8d856634c9cdc</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-26 09:40:14</sys_created_on>
+        <sys_id>ab1e0eb887552110cf80fea9cebb350c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="PracticeNow" source="x_845446_practicen">e91a454d87ac2510cf80fea9cebb3584</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PracticeNow">e91a454d87ac2510cf80fea9cebb3584</sys_scope>
+        <sys_update_name>sp_instance_ab1e0eb887552110cf80fea9cebb350c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-26 09:40:14</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters/>
+    </sp_instance>
+    <sys_translated_text action="DELETE" query="documentkey=ab1e0eb887552110cf80fea9cebb350c"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="PracticeNow">e91a454d87ac2510cf80fea9cebb3584</application>
+        <file_path/>
+        <instance_id>9c950096db32d70052e3f70fbf9619b2</instance_id>
+        <instance_name>dev62093</instance_name>
+        <name>sp_instance_ab1e0eb887552110cf80fea9cebb350c</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance"><sp_instance action="INSERT_OR_UPDATE"><active>true</active><class_name/><color>default</color><css/><glyph/><id/><order>1</order><roles/><short_description/><size>md</size><sp_column display_value="2">580ec6f887552110cf80fea9cebb351d</sp_column><sp_widget display_value="Login">6506d341cb33020000f8d856634c9cdc</sp_widget><sys_class_name>sp_instance</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-02-26 09:40:14</sys_created_on><sys_id>ab1e0eb887552110cf80fea9cebb350c</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="PracticeNow" source="x_845446_practicen">e91a454d87ac2510cf80fea9cebb3584</sys_package><sys_policy/><sys_scope display_value="PracticeNow">e91a454d87ac2510cf80fea9cebb3584</sys_scope><sys_update_name>sp_instance_ab1e0eb887552110cf80fea9cebb350c</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-02-26 09:40:14</sys_updated_on><title/><url/><widget_parameters/></sp_instance><sys_translated_text action="delete_multiple" query="documentkey=ab1e0eb887552110cf80fea9cebb350c"/></record_update>]]></payload>
+        <payload_hash>1080635611</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>3aae594587206510cf80fea9cebb358a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-26 09:40:14</sys_created_on>
+        <sys_id>7b1e0eb887552110cf80fea9cebb350e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1868d1823af0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-26 09:40:14</sys_updated_on>
+        <type>Instance</type>
+        <update_guid>b31e0eb808552110d3e003427abea80e</update_guid>
+        <update_guid_history>b31e0eb808552110d3e003427abea80e:1080635611</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">f52e4ab887552110cf80fea9cebb3535</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-26 09:40:22</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance">sp_instance</sys_db_object>
+        <sys_id>0806ae0664ef40c19ae742115da2b081</sys_id>
+        <sys_metadata>ab1e0eb887552110cf80fea9cebb350c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="PracticeNow" source="x_845446_practicen">e91a454d87ac2510cf80fea9cebb3584</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="PracticeNow">e91a454d87ac2510cf80fea9cebb3584</sys_scope>
+        <sys_scope_delete display_value="">8069edb6f74f41549ad71a7aa6ddaf84</sys_scope_delete>
+        <sys_update_name>sp_instance_ab1e0eb887552110cf80fea9cebb350c</sys_update_name>
+        <sys_update_version display_value="sp_instance_ab1e0eb887552110cf80fea9cebb350c">7b1e0eb887552110cf80fea9cebb350e</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-26 09:40:22</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

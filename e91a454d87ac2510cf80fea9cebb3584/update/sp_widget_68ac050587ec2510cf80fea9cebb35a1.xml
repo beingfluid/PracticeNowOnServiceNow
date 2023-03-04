@@ -247,11 +247,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-01-20 16:45:31</sys_created_on>
         <sys_id>68ac050587ec2510cf80fea9cebb35a1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>Quiz</sys_name>
         <sys_package display_value="PracticeNow" source="x_845446_practicen">e91a454d87ac2510cf80fea9cebb3584</sys_package>
         <sys_policy/>
         <sys_scope display_value="PracticeNow">e91a454d87ac2510cf80fea9cebb3584</sys_scope>
         <sys_update_name>sp_widget_68ac050587ec2510cf80fea9cebb35a1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-01-27 01:56:08</sys_updated_on>
         <template><![CDATA[<main class="px-3">
   <!--
   <div ng-if="!c.data.examSetExist">
